@@ -164,6 +164,16 @@ export default Vue.extend({
           this.innerModel.month = maxMonth
         }
       }
+    },
+
+    'innerModel.year' (v) {
+      const { year, month } = this.innerModel
+      this.$emit('year-changed', { year, month })
+    },
+
+    'innerModel.month' (v) {
+      const { year, month } = this.innerModel
+      this.$emit('month-changed', { year, month })
     }
   },
 
