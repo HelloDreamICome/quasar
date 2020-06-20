@@ -411,8 +411,8 @@ export default {
       localeOptions,
 
       dateRange: null,
-      dateFrom: null,
-      dateTo: null,
+      dateFrom: '2020/05/14',
+      dateTo: '2020/07/10',
       dateRangeFocus: null,
       dateRangeInputFocus: null,
       rangeMinYearMonth: next.getFullYear() + '/' + (next.getMonth() < 9 ? '0' : '') + (next.getMonth() + 1),
@@ -464,6 +464,16 @@ export default {
 
     localeComputed () {
       return this.locale ? this.locale.date : this.$q.lang.date
+    },
+
+    dateRange: {
+      get: function () {
+        return [[this.dateFrom, this.dateTo]]
+      },
+      set: function (newValue) {
+        this.dateFrom = newValue[0][0]
+        this.dateTo = newValue[0][1]
+      }
     }
   },
   watch: {
@@ -477,12 +487,6 @@ export default {
         this.date = '2018/11/03'
         this.nullDate = null
         this.defaultYearMonth = '1986/02'
-      }
-    },
-    dateRange (val) {
-      if (Array.isArray(val) && val.length === 1 && Array.isArray(val[0])) {
-        this.dateFrom = val[0][0]
-        this.dateTo = val[0][1]
       }
     }
   },
