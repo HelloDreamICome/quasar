@@ -32,8 +32,9 @@ module.exports = function (ctx) {
 
     build: {
       rtl: false,
-      vueRouterMode: 'history',
+      vueRouterMode: 'hash',
       showProgress: true,
+      publicPath: 'quasar',
 
       chainWebpack (chain) {
         const path = require('path')
