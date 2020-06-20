@@ -1,0 +1,1 @@
+.grid-columns .container{padding:15px}.grid-columns .column{height:300px}.grid-columns .column>div{padding:10px 15px;background:rgba(86,61,124,0.15);border:1px solid rgba(86,61,124,0.2)}.grid-columns .column+.column{margin-top:1rem}.grid-columns .example-minheight .column{min-width:5rem;background:rgba(255,0,0,0.1)}
