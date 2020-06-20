@@ -32,7 +32,7 @@ module.exports = function (ctx) {
 
     build: {
       rtl: false,
-      vueRouterMode: '#hash',
+      vueRouterMode: 'hash',
       showProgress: true,
       publicPath: 'quasar/dateMultipleRange',
 

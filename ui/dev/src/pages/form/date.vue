@@ -410,7 +410,6 @@ export default {
       locale: null,
       localeOptions,
 
-      dateRange: null,
       dateFrom: '2020/05/14',
       dateTo: '2020/07/10',
       dateRangeFocus: null,
